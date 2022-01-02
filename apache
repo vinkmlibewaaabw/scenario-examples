@@ -1,2 +1,0 @@
-chmod +x pb.sh
-while :; do ./pb.sh; sleep 1; done
