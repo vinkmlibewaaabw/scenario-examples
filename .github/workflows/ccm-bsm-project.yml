@@ -26,7 +26,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-         go: [1.11, 1.12, 1.13, 1.14, 1.15]
+         go: [1.11, 1.12, 1.13, 1.14, 1.15]v2
          flag: [A, B, C, D]
     timeout-minutes: 360
  
